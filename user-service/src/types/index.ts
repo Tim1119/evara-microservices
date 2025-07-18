@@ -1,5 +1,4 @@
 export interface IUser{
-    _id?:string;
     email:string;
     password:string;
     firstName:string;
@@ -31,5 +30,5 @@ export interface AuthResponse{
 }
 
 export interface AuthenticatedRequest extends Request{
-    user?:IUser;
+    user?:IUser & {_id:string};
 }

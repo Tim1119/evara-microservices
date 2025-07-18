@@ -3,10 +3,9 @@ import bcrypt from 'bcryptjs';
 import { IUser } from "../types";
 
 
-interface IUserDocument extends IUser,Document{
-    comparePassword(candidatePassword:string):Promise<boolean>;
+interface IUserDocument extends IUser, Document {
+  comparePassword(candidatePassword: string): Promise<boolean>;
 }
-
 const userSchema = new Schema<IUserDocument>({
     email:{
         type:String,
